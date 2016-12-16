@@ -10,15 +10,29 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var counter = 1
+    //all buttons connected
+    @IBOutlet weak var button: UIButton!
+    
+    let tri = UIImage(named: "Tri")! as UIImage;
+    let circle = UIImage(named: "circle")! as UIImage;
+    
+    var counter = 2
     
     var playerOneScore:[Int] = [0, 0, 0, 0, 0, 0, 0, 0, 0]
     var playerTwoScore:[Int] = [0, 0, 0, 0, 0, 0, 0, 0, 0]
-
+    
+    //all button connected
     @IBAction func buttonPressed(_ sender: AnyObject) {
         
         if counter % 2 == 0 {
-            
+            sender.setImage(tri, for: UIControlState.normal)
+            print(sender.tag)
+            counter += 1
+        
+        } else {
+            sender.setImage(circle, for: UIControlState.normal)
+            print(sender.tag)
+            counter += 1
         }
         
         
