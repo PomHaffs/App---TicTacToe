@@ -24,14 +24,18 @@ class ViewController: UIViewController {
     //all button connected
     @IBAction func buttonPressed(_ sender: AnyObject) {
         
+        let currentButton = sender as? UIButton
+        
         if counter % 2 == 0 {
             sender.setImage(tri, for: UIControlState.normal)
             print(sender.tag)
+            currentButton?.isEnabled = false
             counter += 1
         
         } else {
             sender.setImage(circle, for: UIControlState.normal)
             print(sender.tag)
+            currentButton?.isEnabled = false
             counter += 1
         }
         
