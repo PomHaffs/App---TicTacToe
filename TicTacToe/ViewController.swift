@@ -15,12 +15,13 @@ class ViewController: UIViewController {
     
     let tri = UIImage(named: "Tri")! as UIImage;
     let circle = UIImage(named: "circle")! as UIImage;
-    var currentPlayer:[Int]? = nil
+    //var currentPlayer:[Int]? = nil
     
     var counter = 2
     
     var playerOneScore:[Int] = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
     var playerTwoScore:[Int] = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    
     
     //all button connected
     @IBAction func buttonPressed(_ sender: AnyObject) {
@@ -29,8 +30,6 @@ class ViewController: UIViewController {
         let currentButton = sender as? UIButton
         let indexPosition = ((currentButton?.tag)! / 10)
         let buttonValue = ((currentButton?.tag)! % 10)
-        
-        let winCombo1 = currentPlayer[1]
         
         if counter % 2 == 0 {
             sender.setImage(tri, for: UIControlState.normal)
@@ -50,6 +49,12 @@ class ViewController: UIViewController {
             print(playerTwoScore)
         }
         
+    }
+    
+    func checkWinOne() {
+        if playerOneScore[0] + playerOneScore[1] + playerOneScore[2] == 15{
+            
+        }
     }
     
     
