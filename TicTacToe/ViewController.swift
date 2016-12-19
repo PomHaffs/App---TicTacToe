@@ -19,44 +19,54 @@ class ViewController: UIViewController {
     
     var counter = 2
     
-    var playerOneScore:[Int] = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-    var playerTwoScore:[Int] = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    var triangles:[Int] = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    var circles:[Int] = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
     
     
     //all button connected
     @IBAction func buttonPressed(_ sender: AnyObject) {
     
-        var currentPlayer = playerOneScore
+        var currentPlayer = triangles
         let currentButton = sender as? UIButton
         let indexPosition = ((currentButton?.tag)! / 10)
         let buttonValue = ((currentButton?.tag)! % 10)
         
+        func checkWin() {
+            if ((currentPlayer[1]+currentPlayer[2]+currentPlayer[3] == 15) ||
+                (currentPlayer[4]+currentPlayer[5]+currentPlayer[6] == 15) ||
+                (currentPlayer[7]+currentPlayer[8]+currentPlayer[9] == 15) ||
+                (currentPlayer[1]+currentPlayer[4]+currentPlayer[7] == 15) ||
+                (currentPlayer[2]+currentPlayer[5]+currentPlayer[8] == 15) ||
+                (currentPlayer[3]+currentPlayer[7]+currentPlayer[9] == 15) ||
+                (currentPlayer[1]+currentPlayer[5]+currentPlayer[9] == 15) ||
+                (currentPlayer[3]+currentPlayer[5]+currentPlayer[7] == 15)){
+                print("\(currentPlayer) Win")
+            } else {
+                print("No win \(currentPlayer)")
+            }
+        }
+        
         if counter % 2 == 0 {
             sender.setImage(tri, for: UIControlState.normal)
-            currentPlayer = playerOneScore
-            currentPlayer[indexPosition] = buttonValue
+            currentPlayer = triangles
+            triangles[indexPosition] = buttonValue
             currentButton?.isEnabled = false
             counter += 1
-            print(playerOneScore)
+            print("Tri: \(triangles)")
             
         
         } else {
             sender.setImage(circle, for: UIControlState.normal)
-            currentPlayer = playerTwoScore
-            playerTwoScore[indexPosition] = buttonValue
+            currentPlayer = circles
+            circles[indexPosition] = buttonValue
             currentButton?.isEnabled = false
             counter += 1
-            print(playerTwoScore)
+            print("Circles \(circles)")
         }
+        checkWin()
         
     }
-    
-    func checkWinOne() {
-        if playerOneScore[0] + playerOneScore[1] + playerOneScore[2] == 15{
-            
-        }
-    }
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
