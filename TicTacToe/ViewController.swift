@@ -113,18 +113,6 @@ class ViewController: UIViewController {
         counter += 1
         
     }
-
-//    func resetGame() {
-//
-//        for btn in button {
-//            btn.setImage(UIImage(named: ""), for: [])
-//            btn.isEnabled = true
-//        }
-//        
-//        triangles = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-//        circles = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-//        counter = 2
-//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
