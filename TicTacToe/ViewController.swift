@@ -17,12 +17,32 @@ class ViewController: UIViewController {
     @IBOutlet weak var resetButton: UIButton!
     
     @IBAction func resetButtonPressed(_ sender: Any) {
+        
+        winLabel.isHidden = true
+        resetButton.isHidden = true
+        
+        winLabel.center = CGPoint(x: winLabel.center.x, y: winLabel.center.y + 500)
+        resetButton.center = CGPoint(x: resetButton.center.x, y: resetButton.center.y - 500)
+        
+        activeGame = true
+        triangles = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        circles = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        counter = 2
+        
+        for i in 1..<97 {
+            
+            if let btn = view.viewWithTag(i) as? UIButton {
+                btn.setImage(nil, for: [])
+            }
+            
+        }
+        
     }
     
     let tri = UIImage(named: "Tri")! as UIImage;
     let circle = UIImage(named: "circle")! as UIImage;
     //var currentPlayer:[Int]? = nil
-    
+    var activeGame = true
     var counter = 2
     
     var triangles:[Int] = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
@@ -32,7 +52,6 @@ class ViewController: UIViewController {
     //all button connected
     @IBAction func buttonPressed(_ sender: AnyObject) {
     
-        var activeGame = true
         var currentPlayer = triangles
         let currentButton = sender as? UIButton
         let indexPosition = ((currentButton?.tag)! / 10)
@@ -95,17 +114,17 @@ class ViewController: UIViewController {
         
     }
 
-    func resetGame() {
-
-        for btn in button {
-            btn.setImage(UIImage(named: ""), for: [])
-            btn.isEnabled = true
-        }
-        
-        triangles = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-        circles = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-        counter = 2
-    }
+//    func resetGame() {
+//
+//        for btn in button {
+//            btn.setImage(UIImage(named: ""), for: [])
+//            btn.isEnabled = true
+//        }
+//        
+//        triangles = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+//        circles = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+//        counter = 2
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
