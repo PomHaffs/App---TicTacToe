@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -31,7 +31,7 @@
                                     <constraint firstAttribute="height" constant="69" id="eHd-Jp-lPW"/>
                                     <constraint firstAttribute="width" constant="97" id="gxL-CO-axG"/>
                                 </constraints>
-                                <state key="normal" title="Button" image="Tri"/>
+                                <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AJN-l6-j5n"/>
                                 </connections>
@@ -42,7 +42,7 @@
                                     <constraint firstAttribute="width" constant="97" id="Itb-vD-UjM"/>
                                     <constraint firstAttribute="height" constant="69" id="TvX-9R-djp"/>
                                 </constraints>
-                                <state key="normal" title="Button" image="circle"/>
+                                <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="70W-8Y-qz9"/>
                                 </connections>
@@ -53,7 +53,7 @@
                                     <constraint firstAttribute="height" constant="69" id="A1h-8e-iHK"/>
                                     <constraint firstAttribute="width" constant="97" id="mma-XA-sTO"/>
                                 </constraints>
-                                <state key="normal" title="Button" image="circle"/>
+                                <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9TX-Us-lYQ"/>
                                 </connections>
@@ -64,7 +64,7 @@
                                     <constraint firstAttribute="width" constant="97" id="QcJ-ah-RHb"/>
                                     <constraint firstAttribute="height" constant="69" id="rbi-Vy-UjP"/>
                                 </constraints>
-                                <state key="normal" title="Button" image="Tri"/>
+                                <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y34-js-8ml"/>
                                 </connections>
@@ -75,7 +75,7 @@
                                     <constraint firstAttribute="width" constant="97" id="IND-wi-ELX"/>
                                     <constraint firstAttribute="height" constant="69" id="K6o-3w-RhF"/>
                                 </constraints>
-                                <state key="normal" title="Button" image="circle"/>
+                                <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1iQ-LE-Sz1"/>
                                 </connections>
@@ -86,7 +86,7 @@
                                     <constraint firstAttribute="width" constant="97" id="Ljq-4S-XdP"/>
                                     <constraint firstAttribute="height" constant="69" id="e7t-TK-YOT"/>
                                 </constraints>
-                                <state key="normal" title="Button" image="circle"/>
+                                <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bzv-63-OoF"/>
                                 </connections>
@@ -97,7 +97,7 @@
                                     <constraint firstAttribute="width" constant="97" id="t1F-Wa-54g"/>
                                     <constraint firstAttribute="height" constant="69" id="x2o-jr-kio"/>
                                 </constraints>
-                                <state key="normal" title="Button" image="circle"/>
+                                <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k7T-LW-Q4w"/>
                                 </connections>
@@ -108,7 +108,7 @@
                                     <constraint firstAttribute="width" constant="97" id="QJE-8y-Kn4"/>
                                     <constraint firstAttribute="height" constant="69" id="hxW-3g-bZH"/>
                                 </constraints>
-                                <state key="normal" title="Button" image="Tri"/>
+                                <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5rE-S2-STK"/>
                                 </connections>
@@ -119,7 +119,7 @@
                                     <constraint firstAttribute="height" constant="69" id="Dx0-ar-3cf"/>
                                     <constraint firstAttribute="width" constant="97" id="jn9-8z-6y3"/>
                                 </constraints>
-                                <state key="normal" title="Button" image="Tri"/>
+                                <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yrh-8W-4e7"/>
                                 </connections>
@@ -169,8 +169,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Tri" width="551" height="517"/>
         <image name="back" width="330" height="331"/>
-        <image name="circle" width="779" height="510"/>
     </resources>
 </document>

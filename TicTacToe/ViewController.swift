@@ -31,6 +31,22 @@ class ViewController: UIViewController {
         let indexPosition = ((currentButton?.tag)! / 10)
         let buttonValue = ((currentButton?.tag)! % 10)
         
+        if counter % 2 == 0 {
+            sender.setImage(tri, for: UIControlState.normal)
+            currentPlayer = triangles
+            triangles[indexPosition] = buttonValue
+            currentButton?.isEnabled = false
+            print("Tri: \(triangles)")
+            
+        
+        } else {
+            sender.setImage(circle, for: UIControlState.normal)
+            currentPlayer = circles
+            circles[indexPosition] = buttonValue
+            currentButton?.isEnabled = false
+            print("Circles \(circles)")
+        }
+        
         func checkWin() {
             if ((currentPlayer[1]+currentPlayer[2]+currentPlayer[3] == 15) ||
                 (currentPlayer[4]+currentPlayer[5]+currentPlayer[6] == 15) ||
@@ -40,30 +56,14 @@ class ViewController: UIViewController {
                 (currentPlayer[3]+currentPlayer[7]+currentPlayer[9] == 15) ||
                 (currentPlayer[1]+currentPlayer[5]+currentPlayer[9] == 15) ||
                 (currentPlayer[3]+currentPlayer[5]+currentPlayer[7] == 15)){
-                print("\(currentPlayer) Win")
+                print("Win")
             } else {
-                print("No win \(currentPlayer)")
+                print("No win")
             }
         }
         
-        if counter % 2 == 0 {
-            sender.setImage(tri, for: UIControlState.normal)
-            currentPlayer = triangles
-            triangles[indexPosition] = buttonValue
-            currentButton?.isEnabled = false
-            counter += 1
-            print("Tri: \(triangles)")
-            
-        
-        } else {
-            sender.setImage(circle, for: UIControlState.normal)
-            currentPlayer = circles
-            circles[indexPosition] = buttonValue
-            currentButton?.isEnabled = false
-            counter += 1
-            print("Circles \(circles)")
-        }
         checkWin()
+        counter += 1
         
     }
 
